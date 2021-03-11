@@ -12,36 +12,37 @@
             <div class="posts-group" >
                 <div class="post-year">{{ .Key }}</div>
 
-                <ul class="posts-list row" id="tooltip">
+                <ul class="posts-list">
                     {{ range .Pages }}
-                        <li class="post-item col-md-12">
-                          <div class=" flex-column mb-4 box-shadow h-md-250">
-                            <span class=" card-title d-inline-block mb-auto text-primary ">{{.Title}}</span>
-                             {{ range .Data.Pages }}
+                        <li class="post-item card-body row" style="height: 220px;">
+                          <a href="{{.Permalink}}" style="align-items:inherit;">
+                              <div class="col">
+                                <img class="" src="https://img.youtube.com/vi/{{.Params.description}}/maxresdefault.jpg" alt="Card image cap">
+                              </div>
+
+                            <div class="col">
+                              <span class="post-title card-title">{{.Title}}</span>
+                                   {{ range .Data.Pages }}
 
 
-                            {{end}}
-                            <span class="mb-auto text-muted  ">
+                                  {{end}}
 
-                                {{ if .Site.Params.dateformShort }}
-                                    {{ .Date.Format .Site.Params.dateformShort }}
-                                {{ else }}
-                                    {{ .Date.Format "Jan 2"}}
-                                {{ end }}
+                                    <div class="p-3 flex-column align-items-start">
+                                          <span class="post-day">
 
-                            </span>
+                                              {{ if .Site.Params.dateformShort }}
+                                                  {{ .Date.Format .Site.Params.dateformShort }}
+                                              {{ else }}
+                                                  {{ .Date.Format "Jan 2"}}
+                                              {{ end }}
 
-                            <span class="post-tag ">{{.Params.tag}} </span>
-                          </div>
-                            <a href="{{.Permalink}}" class="card-body d-flex flex-column align-items-start">
+                                          </span>
 
+                                          <span class="post-tag">{{.Params.tag}}
+                                          </span>
+                                    </div>
 
-
-                              <img class="card-img-right flex-auto d-none d-md-block" src="https://img.youtube.com/vi/{{.Params.description}}/maxresdefault.jpg" alt="Card image cap">
-
-
-
-
+                            </div>
 
                             </a>
                         </li>

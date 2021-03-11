@@ -360,6 +360,12 @@ hr {
   background-position: center !important;
   background-repeat: no-repeat !important;;
 }
+.gradient-6{
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+.gradient-2{
+  background-image: linear-gradient(to right, #1db0df, #f7092d);
+}
 // Prism JS Additionals
 .highlight {
   margin: 30px auto;

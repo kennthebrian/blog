@@ -1,7 +1,7 @@
 ---
 title: "Rethinking The Web"
 date: 2021-02-26T10:32:06+03:00
-draft: true
+draft: false
 toc: false
 images:
 tag: ["Education"]

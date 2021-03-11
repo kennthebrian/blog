@@ -21,7 +21,6 @@ theme = "#1b1c1d"
 #share posts
 enableSharingButtons = true
 enableInlineShortcodes = true
-backgroundImage  = "images/1.jpg"
 includeListPagesInTaxonomyLists = true
 
 [permalinks]
